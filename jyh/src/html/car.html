@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" href="../css/car.css" />
+		<script src="../assets/js/jquery-1.12.0.js"></script>
+		<script type="text/javascript" src="../js/mycookie.js" ></script>
+		<script src="../js/new.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div id="header-left">
+				<a href="#">收藏</a>
+			</div>
+			<ul>
+				<li><a href="#">您好,欢迎来到家有汇！</a></li>
+				<li><a href="html/denglu.html">【登录】</a></li>
+				<li><a href="html/zhuce.html">【注册】</a></li>
+				<li><a href="#">【电视用户激活】</a></li>
+				<li><a href="html/car.html">购物车(<span>0</span>)</a></li>
+				<li><a href="#">我的家有汇！</a></li>
+			</ul>
+		</div>
+		
+		<div id="title">
+			<div id="title-pic">
+				<img src="../css/images/log00.jpg">
+			</div>
+			<div id="title-content">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">今日直播</a></li>
+					<li><a href="#">限时特价</a></li>
+					<li><a href="#">生活家</a></li>
+					<li><a href="#">家有尊享</a></li>
+				</ul>
+			</div>
+			<div id="title-btn">
+				<input type="text" value="" placeholder="双立人" /><button>搜索</button>
+			</div>
+		</div>
+		
+		<div id="header-footer">
+			<ul>
+				<li><a href="#">厨房用品</a></li>
+					<li><a href="#">生活家居</a></li>
+					<li><a href="#">厨房电器</a></li>
+					<li><a href="#">家私用品</a></li>
+					<li><a href="#">美容护肤</a></li>
+					<li><a href="html/详情页.html">服装服饰</a></li>
+					<li><a href="#">食品饮料</a></li>
+					<li><a href="#">箱包配饰</a></li>
+					<li><a href="#">运动健身</a></li>
+					<li><a href="#">生活电器</a></li>
+					<li><a href="#">3C数码</a></li>
+					<li><a href="#">宠物用品</a></li>
+					<li><a href="#">母婴用品</a></li>
+			</ul>
+		</div>
+		<div id="car">
+			<div class="tab">
+				<div class="active">我的购物车</div>
+				<div>填写订单信息</div>
+				<div>成功提交订单</div>
+			</div>
+			<div class="content">
+				<div class="biaoti">
+					<div class="xiaobiaoti">
+						<ul>
+							<li>商品编号</li>
+							<li>商品信息</li>
+							<li>商品价格</li>
+							<li>商品数量</li>
+							<li>操作</li>
+						</ul>
+					</div>
+					
+					<div class="xiangqing" id="adv">
+						<ul id="ul">
+							<!--<li>9142453</li>
+							<li>	 
+								<img src="../css/images/list.jpg">
+								<span>雅鹿亲肤棉印花女士内衣套装<span>共同女-175</span></span>
+							</li>
+							<li>￥299.00</li>
+							<li>
+								<p>
+									<button>-</button>
+									<input type="number" value="1" class="txt" style="width: 30px; text-align:center;"/>
+									<button>+</button>
+								</p>
+							</li>
+							<li>
+								<button>删除</button>
+							</li>-->
+						</ul>
+					</div>
+					
+					<div class="smal">
+							<p>共计（不含运费）:<span id="span">0.00元</span></p>
+					</div>
+					<div id="center-btn">
+						<button class="center-left" id="gw">继续购物</button>
+						<button class="center-right" id="suan">去结算</button>
+					</div>
+				</div>
+				
+			</div>
+			<div class="content txt1" id="net">
+				<h2>填写订单</h2>
+				<div style="margin-top: 10px;">
+					<h3 style="text-indent: 20px;">收货人信息</h3>
+					<div class="op" style="margin-left: 30px;">
+						<p><input type="radio">使用新地址</p>
+						<p>&nbsp;<span>*</span>收货人:<input type="text" /></p>
+						<p><span>*</span>所在地区:
+							<select>
+								<option>河北</option>
+								<option>广东</option>
+								<option>贵州</option>
+								<option>四川</option>
+							</select>
+							<select>
+								<option>A市</option>
+								<option>B市</option>
+								<option>C市</option>
+								<option>D市</option>
+							</select>
+							<select>
+								<option>A区</option>
+								<option>B区</option>
+								<option>C区</option>
+								<option>D区</option>
+							</select>
+						</p>
+						<p><span>*</span>详细地址:<input type="text" /></p>
+						<p>&nbsp;&nbsp;<span>*</span>邮编:<input type="text" /></p>
+						<p><span>*</span>联系电话:<input type="text" /></p>
+						<p><button>保存收货人地址</button></p>
+					</div>
+					<h3>支付方式</h3>
+						<div class="pp" style="margin-left: 30px;">
+							<p>已选择:支付宝支付</p>
+							<p><input type="radio">支付宝支付&nbsp;&nbsp;&nbsp;在线支付</p>
+							<p><input type="radio">货到付款&nbsp;&nbsp;快递员将在送货上门时收款，请你准备好现金</p>
+							<p><button>保存支付信息</button></p>
+						</div>
+					<div style="border-bottom: 1px solid darkgray;border-top: 1px solid darkgray;margin-top: 5px;">
+						<h2 style="font-size: 20px; line-height: 30px;">发票信息</h2>
+						<p style="font-size: 16px; line-height: 30px; text-indent: 20px;"><button>+</button>索要发票信息</p>
+					</div>
+					<div style=" margin-top: 5px;">
+						<h3>商品信息</h3>
+						<div class="nav">
+							<ul>
+								<li>商品编号</li>
+								<li>商品信息</li>
+								<li>商品价格</li>
+								<li>商品数量</li>
+							</ul>
+							<div class="clearpic">
+								<ul>
+									<li>9142453</li>
+									<li>	 
+										<!--<img src="../css/images/list.jpg">-->
+										<span>雅鹿亲肤棉印花女士内衣套装<span>共同女-175</span></span>
+									</li>
+									<li>￥299.00</li>
+									<li>2</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div style="clear: both;"></div>
+					<div style="margin-top: 10px;">
+						<h3 style="line-height: 40px;">使用优惠<span>[修改]</span></h3>
+						<p style="line-height: 40px;font-size: 16px;">未使用任何优惠</p>
+					</div>
+					
+					<div style="position:relative;left:800px;bottom: 0; clear: both;">
+						<p>商品总额:<span style="margin-left: 30px;">￥598.00</span></p>
+						<p>&nbsp;&nbsp;商品:<span style="margin-left: 30px; color: #FF6600;">￥598.00</span></p>
+						<p>商品总额:<span style="margin-left: 30px; color: #FF6600;font-size: 40px;">￥598.00</span></p>
+						<p><button style="width: 280px; height: 40px;color: white; background: #FF6600;border: none;">确认订单</button></p>
+					</div>
+				</div>
+			</div>
+			<div class="content">3</div>
+		</div>
+		
+		<div id="ibtn">
+				<div id="ibtn1">
+					<ul>
+						<li>
+							<h4>关于我们</h4>
+							<p>公司介绍</p>
+							<p>招聘信息</p>
+							<p>联系我们</p>
+							<p>用户隐私条款</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>订购指南</h4>
+							<p>交易条款</p>
+							<p>注册/购物流程</p>
+							<p>退/换货</p>
+							<p>积分说明</p>
+							<p>发票指南</p>
+							<p>会员制度说明</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>配送服务</h4>
+							<p>配送区域</p>
+							<p>配送时间</p>
+							<p>验货与签收</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>支付方式</h4>
+							<p>网上支付</p>
+							<p>货到付款</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>合作专区</h4>
+							<p>成为供应商</p>
+							<p>供应商系统</p>
+							<p>合作伙伴</p>
+						</li>
+					</ul>
+				</div>
+				<div id="ibtn2">
+					<dl>
+						<dt><img src="../css/images/weixin2.jpg"/></dt>
+						<dd>家有微信</dd>
+					</dl>
+					<dl>
+						<dt><img src="../css/images/weixin3.jpg"/></dt>
+						<dd>惠佳有APP</dd>
+					</dl>
+					<div id="ibtn3">
+						<dl>
+							<dt><img src="../css/images/weixin4.jpg"/></dt>
+							<dd>
+								<h2>400-678-888</h2>
+								<p>客服7&times;24小时(全年无休)</p>
+							</dd>
+							<p>站长统计</p>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div id="obtn">
+				<dl>
+					<dt><img src="../css/images/yuan.jpg"/></dt>
+					<dd>
+						<p>100%正品保障</p>
+						<p>质量有保障</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="../css/images/yuan.jpg"/></dt>
+					<dd>
+						<p>100%正品保障</p>
+						<p>质量有保障</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="../css/images/yuan.jpg"/></dt>
+					<dd>
+						<p>100%正品保障</p>
+						<p>质量有保障</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="../css/images/yuan.jpg"/></dt>
+					<dd>
+						<p>100%正品保障</p>
+						<p>质量有保障</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="../css/images/yuan.jpg"/></dt>
+					<dd>
+						<p>100%正品保障</p>
+						<p>质量有保障</p>
+					</dd>
+				</dl>
+			</div>
+			<div id="floor-btn">
+				<span>友情链接：</span><a href="#">北京商报</a>|<a href="#">装修</a>|<a href="#">新闻</a>|<a href="#">建材</a>|<a href="#">潮牌</a>|<a href="#">没得比导购网</a>|<a href="#">搜狗</a>|<a href="#">服装店</a>|<a href="#">超级返</a>|<a href="#">服装批发</a>|<a href="#">行业网</a>|<a href="#">手表网</a>|<a href="#">黄页大全</a>|<a href="#">韩都衣舍</a>|<a href="#">折800</a>|<a href="#">乐考网</a>|<a href="#">购物网站导航</a>|<a href="#">生活百科网</a>|<a href="#">hao123</a>|<a href="#">360</a>|<a href="#">懒人门户</a>|<a href="#">114导航</a>|<a href="#">2523网址导航</a>|<a href="#">IFA2015</a><br/>
+				<p>Copyright@2008-2013 jiayougo.com 家有购物集团 版权所有 黔IC备13002365号 增值电信业务经营许可证:黔B2-20120036</p>
+				<img src="../css/images/bottom1.jpg"/>
+				<img src="../css/images/bottom1.jpg"/>
+				<img src="../css/images/bottom1.jpg"/>
+				<img src="../css/images/bottom1.jpg"/>
+				<img src="../css/images/bottom1.jpg"/>
+				<img src="../css/images/bottom1.jpg"/>
+				<img src="../css/images/bottom1.jpg"/>
+				<img src="../css/images/bottom1.jpg"/>
+				<img src="../css/images/bottom1.jpg"/>
+				<img src="../css/images/bottom0.jpg"/>
+				<img class="bottomx" src="../css/images/bottomx.jpg"/>
+			</div>
+	</body>
+</html>
